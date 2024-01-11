@@ -1,0 +1,15 @@
+Package: DataBridgesAPIr
+Title: R Package Client for VAM-Data-Bridges
+Version: 1.0.0
+Author: person("VAM-INFO", email = "wfp.economicanalysis@wfp.org", role = c("aut", "cre"))
+Maintainer: VAM-INFO <wfp.economicanalysis@wfp.org>
+Description: API Documentation of the **DataBridges** platform: https://databridges.vam.wfp.org/. For API discussions and details: #api-integration-vam-data-bridges on Slack, [Teams channel](https://teams.microsoft.com/l/team/19%3a4ca595f7681f4ffa8a86b7af58832e8d%40thread.skype/conversations?groupId=cbd1e508-c6e8-459d-96b7-6cac3039c42c&tenantId=462ad9ae-d7d9-4206-b874-71b1e079776f) **API Integration** - This endpoint uses [Hey Jude](https://docs.api.wfp.org/providers/#api-patterns) pattern
+URL: https://github.com/GIT_USER_ID/GIT_REPO_ID
+BugReports: https://github.com/GIT_USER_ID/GIT_REPO_ID/issues
+Depends: R (>= 3.3)
+Encoding: UTF-8
+License: Unlicense
+LazyData: true
+Suggests: testthat
+Imports: jsonlite, httr2, R6, base64enc, stringr
+RoxygenNote: 7.2.1
