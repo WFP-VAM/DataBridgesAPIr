@@ -1,4 +1,4 @@
-# databridges::PagedCommodityWeeklyAggregatedPriceListDTO
+# DataBridgesAPIr::PagedCommodityWeeklyAggregatedPriceListDTO
 
 
 ## Properties

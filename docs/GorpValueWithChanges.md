@@ -1,4 +1,4 @@
-# databridges::GorpValueWithChanges
+# DataBridgesAPIr::GorpValueWithChanges
 
 
 ## Properties

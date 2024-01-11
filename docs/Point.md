@@ -1,4 +1,4 @@
-# databridges::Point
+# DataBridgesAPIr::Point
 
 
 ## Properties

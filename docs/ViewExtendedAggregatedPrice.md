@@ -1,4 +1,4 @@
-# databridges::ViewExtendedAggregatedPrice
+# DataBridgesAPIr::ViewExtendedAggregatedPrice
 
 
 ## Properties

@@ -1,4 +1,4 @@
-# databridges::CommodityQualityDTO
+# DataBridgesAPIr::CommodityQualityDTO
 
 
 ## Properties

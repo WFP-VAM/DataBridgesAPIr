@@ -1,4 +1,4 @@
-# databridges::CommodityPriceDTO
+# DataBridgesAPIr::CommodityPriceDTO
 
 
 ## Properties

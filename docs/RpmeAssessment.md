@@ -1,4 +1,4 @@
-# databridges::RpmeAssessment
+# DataBridgesAPIr::RpmeAssessment
 
 
 ## Properties

@@ -17,7 +17,7 @@ Returns the lists of indicators.
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Returns the lists of indicators.
 #
@@ -28,12 +28,12 @@ var_iso3 <- "" # character | The code to identify the country. Must be a ISO-316
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- EconomicDataApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$EconomicDataIndicatorListGet(page = var_page, indicator_name = var_indicator_name, iso3 = var_iso3, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$economic_data_api$EconomicDataIndicatorListGet(page = var_page, indicator_name = var_indicator_name, iso3 = var_iso3, format = var_format, env = var_env)
+result <- api_instance$EconomicDataIndicatorListGet(page = var_page, indicator_name = var_indicator_name, iso3 = var_iso3, format = var_format, env = var_env)
 dput(result)
 ```
 
@@ -75,7 +75,7 @@ Returns the time series of values for different indicators.
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Returns the time series of values for different indicators.
 #
@@ -88,12 +88,12 @@ var_end_date <- "end_date_example" # character | Ending date for the range in wh
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- EconomicDataApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$EconomicDataIndicatorNameGet(var_indicator_name, page = var_page, iso3 = var_iso3, start_date = var_start_date, end_date = var_end_date, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$economic_data_api$EconomicDataIndicatorNameGet(var_indicator_name, page = var_page, iso3 = var_iso3, start_date = var_start_date, end_date = var_end_date, format = var_format, env = var_env)
+result <- api_instance$EconomicDataIndicatorNameGet(var_indicator_name, page = var_page, iso3 = var_iso3, start_date = var_start_date, end_date = var_end_date, format = var_format, env = var_env)
 dput(result)
 ```
 

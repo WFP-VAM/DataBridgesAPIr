@@ -1,4 +1,4 @@
-# R API client for databridges
+# R API client for DataBridgesAPIr
 
 API Documentation of the **DataBridges** platform: https://databridges.vam.wfp.org/. For API discussions and details: #api-integration-vam-data-bridges on Slack, [Teams channel](https://teams.microsoft.com/l/team/19%3a4ca595f7681f4ffa8a86b7af58832e8d%40thread.skype/conversations?groupId=cbd1e508-c6e8-459d-96b7-6cac3039c42c&tenantId=462ad9ae-d7d9-4206-b874-71b1e079776f) **API Integration** - This endpoint uses [Hey Jude](https://docs.api.wfp.org/providers/#api-patterns) pattern
 
@@ -24,35 +24,35 @@ install.packages("base64enc")
 ### Build the package
 
 ```sh
-git clone https://github.com/GIT_USER_ID/GIT_REPO_ID
+git clone https://github.com/WFP-VAM/DataBridgesAPIr
 cd GIT_REPO_ID
 R CMD build .
-R CMD check databridges_1.0.0.tar.gz --no-manual
-R CMD INSTALL --preclean databridges_1.0.0.tar.gz
+R CMD check DataBridgesAPIr_1.0.0.tar.gz --no-manual
+R CMD INSTALL --preclean DataBridgesAPIr_1.0.0.tar.gz
 ```
 
 ### Install the package
 
 ```R
-install.packages("databridges")
+install.packages("DataBridgesAPIr")
 ```
 
 To install directly from Github, use `devtools`:
 ```R
 install.packages("devtools")
 library(devtools)
-install_github("GIT_USER_ID/GIT_REPO_ID")
+install_github("WFP-VAM/DataBridgesAPIr")
 ```
 
 To install the package from a local file:
 ```R
-install.packages("databridges_1.0.0.tar.gz", repos = NULL, type = "source")
+install.packages("DataBridgesAPIr_1.0.0.tar.gz", repos = NULL, type = "source")
 ```
 
 ### Usage
 
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 ```
 
 ### Reformat code

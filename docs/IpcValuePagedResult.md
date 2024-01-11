@@ -1,4 +1,4 @@
-# databridges::IpcValuePagedResult
+# DataBridgesAPIr::IpcValuePagedResult
 
 
 ## Properties

@@ -19,7 +19,7 @@ Provide a list of geo referenced markets in a specific country
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Provide a list of geo referenced markets in a specific country
 #
@@ -27,12 +27,12 @@ library(databridges)
 var_adm0code <- 56 # integer | The admin code of the country (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- MarketsApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$MarketsGeoJSONListGet(adm0code = var_adm0code, env = var_envdata_file = "result.txt")
-result <- api_instance$markets_api$MarketsGeoJSONListGet(adm0code = var_adm0code, env = var_env)
+result <- api_instance$MarketsGeoJSONListGet(adm0code = var_adm0code, env = var_env)
 dput(result)
 ```
 
@@ -71,7 +71,7 @@ Get a complete list of markets in a country
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Get a complete list of markets in a country
 #
@@ -81,12 +81,12 @@ var_page <- 1 # integer | page number for paged results (Optional)
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- MarketsApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$MarketsListGet(country_code = var_country_code, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$markets_api$MarketsListGet(country_code = var_country_code, page = var_page, format = var_format, env = var_env)
+result <- api_instance$MarketsListGet(country_code = var_country_code, page = var_page, format = var_format, env = var_env)
 dput(result)
 ```
 
@@ -126,7 +126,7 @@ Get a complete list of markets in a country
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Get a complete list of markets in a country
 #
@@ -135,12 +135,12 @@ var_adm0code <- 56 # integer | The admin code of the country (Optional)
 var_local_names <- FALSE # character | If true the name of markets and regions will be localized if available (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- MarketsApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$MarketsMarketsAsCSVGet(adm0code = var_adm0code, local_names = var_local_names, env = var_envdata_file = "result.txt")
-result <- api_instance$markets_api$MarketsMarketsAsCSVGet(adm0code = var_adm0code, local_names = var_local_names, env = var_env)
+result <- api_instance$MarketsMarketsAsCSVGet(adm0code = var_adm0code, local_names = var_local_names, env = var_env)
 dput(result)
 ```
 
@@ -179,7 +179,7 @@ Find markets near a given location by longitude and latitude within a 15Km dista
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Find markets near a given location by longitude and latitude within a 15Km distance
 #
@@ -189,12 +189,12 @@ var_lat <- 3.4 # numeric | latitude of the point that will be used to search for
 var_lng <- 3.4 # numeric | longitude of the point that will be used to search for existing nearby markets.  Geo-reference standard used for this coordinate is decimal (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- MarketsApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$MarketsNearbyMarketsGet(adm0code = var_adm0code, lat = var_lat, lng = var_lng, env = var_envdata_file = "result.txt")
-result <- api_instance$markets_api$MarketsNearbyMarketsGet(adm0code = var_adm0code, lat = var_lat, lng = var_lng, env = var_env)
+result <- api_instance$MarketsNearbyMarketsGet(adm0code = var_adm0code, lat = var_lat, lng = var_lng, env = var_env)
 dput(result)
 ```
 

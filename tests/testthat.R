@@ -1,4 +1,4 @@
 library(testthat)
-library(databridges)
+library(DataBridgesAPIr)
 
-test_check("databridges")
+test_check("DataBridgesAPIr")

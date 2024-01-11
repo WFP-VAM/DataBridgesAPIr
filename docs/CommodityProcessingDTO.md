@@ -1,4 +1,4 @@
-# databridges::CommodityProcessingDTO
+# DataBridgesAPIr::CommodityProcessingDTO
 
 
 ## Properties

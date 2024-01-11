@@ -71,7 +71,7 @@ RpmeVariablePagedResult <- R6::R6Class(
     fromJSON = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
       if (!is.null(this_object$`items`)) {
-        self$`items` <- ApiClient$new()$deserializeObj(this_object$`items`, "array[RpmeVariable]", loadNamespace("databridges"))
+        self$`items` <- ApiClient$new()$deserializeObj(this_object$`items`, "array[RpmeVariable]", loadNamespace("DataBridgesAPIr"))
       }
       # process additional properties/fields in the payload
       for (key in names(this_object)) {
@@ -118,7 +118,7 @@ RpmeVariablePagedResult <- R6::R6Class(
     #' @export
     fromJSONString = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
-      self$`items` <- ApiClient$new()$deserializeObj(this_object$`items`, "array[RpmeVariable]", loadNamespace("databridges"))
+      self$`items` <- ApiClient$new()$deserializeObj(this_object$`items`, "array[RpmeVariable]", loadNamespace("DataBridgesAPIr"))
       # process additional properties/fields in the payload
       for (key in names(this_object)) {
         if (!(key %in% self$`_field_list`)) { # json key not in list of fields

@@ -80,7 +80,7 @@
 #' \dontrun{
 #' ####################  CommodityUnitsConversionListGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code. (Optional)
 #' var_commodity_id <- 0 # integer | The exact ID of a Commodity, as found in /Commodities/List (Optional)
 #' var_from_unit_id <- 0 # integer | The exact ID of the original unit of measure of the price of a commodity, as found in /CommodityUnits/List (Optional)
@@ -90,20 +90,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Provides conversion factors to Kilogram or Litres for each convertible unit of measure.
-#' api_instance <- databridges_api$new()
+#' api_instance <- CommodityUnitsApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$CommodityUnitsConversionListGet(country_code = var_country_code, commodity_id = var_commodity_id, from_unit_id = var_from_unit_id, to_unit_id = var_to_unit_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$commodity_units_api$CommodityUnitsConversionListGet(country_code = var_country_code, commodity_id = var_commodity_id, from_unit_id = var_from_unit_id, to_unit_id = var_to_unit_id, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$CommodityUnitsConversionListGet(country_code = var_country_code, commodity_id = var_commodity_id, from_unit_id = var_from_unit_id, to_unit_id = var_to_unit_id, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  CommodityUnitsListGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code (Optional)
 #' var_commodity_unit_name <- "commodity_unit_name_example" # character | The name, even partial and case insensitive, of a commodity unit (Optional)
 #' var_commodity_unit_id <- 0 # integer | The exact ID of a commodity unit (Optional)
@@ -112,14 +112,14 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Provides the detailed list of the unit of measure available in DataBridges platform
-#' api_instance <- databridges_api$new()
+#' api_instance <- CommodityUnitsApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$CommodityUnitsListGet(country_code = var_country_code, commodity_unit_name = var_commodity_unit_name, commodity_unit_id = var_commodity_unit_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$commodity_units_api$CommodityUnitsListGet(country_code = var_country_code, commodity_unit_name = var_commodity_unit_name, commodity_unit_id = var_commodity_unit_id, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$CommodityUnitsListGet(country_code = var_country_code, commodity_unit_name = var_commodity_unit_name, commodity_unit_id = var_commodity_unit_id, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
@@ -254,7 +254,7 @@ CommodityUnitsApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "PagedCommodityListDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "PagedCommodityListDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -376,7 +376,7 @@ CommodityUnitsApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "PagedCommodityListDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "PagedCommodityListDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

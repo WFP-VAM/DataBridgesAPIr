@@ -1,4 +1,4 @@
-# databridges::XlsFormDefinitionDTO
+# DataBridgesAPIr::XlsFormDefinitionDTO
 
 
 ## Properties

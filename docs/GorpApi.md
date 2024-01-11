@@ -17,7 +17,7 @@ Return the latest dataset of number of acutely food insecure (in millions)  base
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Return the latest dataset of number of acutely food insecure (in millions)  based on WFP Global Operational Response Plan.
 #
@@ -25,12 +25,12 @@ library(databridges)
 var_page <- 1 # integer |  (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- GorpApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$GorpLatestGet(page = var_page, env = var_envdata_file = "result.txt")
-result <- api_instance$gorp_api$GorpLatestGet(page = var_page, env = var_env)
+result <- api_instance$GorpLatestGet(page = var_page, env = var_env)
 dput(result)
 ```
 
@@ -69,7 +69,7 @@ Return the full dataset of number of acutely food insecure (in millions) based o
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Return the full dataset of number of acutely food insecure (in millions) based on WFP Global Operational Response Plan.
 #
@@ -77,12 +77,12 @@ library(databridges)
 var_page <- 1 # integer |  (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- GorpApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$GorpListGet(page = var_page, env = var_envdata_file = "result.txt")
-result <- api_instance$gorp_api$GorpListGet(page = var_page, env = var_env)
+result <- api_instance$GorpListGet(page = var_page, env = var_env)
 dput(result)
 ```
 

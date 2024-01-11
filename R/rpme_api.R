@@ -132,7 +132,7 @@
 #' \dontrun{
 #' ####################  RpmeOutputValuesGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_page <- 1 # integer | page number for paged results (Optional)
 #' var_adm0_code <- 56 # integer | Code for the country as retrieved from https://api.vam.wfp.org/geodata/CountriesInRegion (Optional)
 #' var_survey_id <- 56 # integer | The ID of the survey (Optional)
@@ -142,20 +142,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Processed values for each variable used in the assessments
-#' api_instance <- databridges_api$new()
+#' api_instance <- RpmeApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$RpmeOutputValuesGet(page = var_page, adm0_code = var_adm0_code, survey_id = var_survey_id, shop_id = var_shop_id, market_id = var_market_id, adm0_code_dots = var_adm0_code_dots, env = var_envdata_file = "result.txt")
-#' result <- api_instance$rpme_api$RpmeOutputValuesGet(page = var_page, adm0_code = var_adm0_code, survey_id = var_survey_id, shop_id = var_shop_id, market_id = var_market_id, adm0_code_dots = var_adm0_code_dots, env = var_env)
+#' result <- api_instance$RpmeOutputValuesGet(page = var_page, adm0_code = var_adm0_code, survey_id = var_survey_id, shop_id = var_shop_id, market_id = var_market_id, adm0_code_dots = var_adm0_code_dots, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  RpmeSurveysGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_adm0_code <- 0 # integer | code for the country as retrieved from https://api.vam.wfp.org/geodata/CountriesInRegion (Optional)
 #' var_page <- 1 # integer | page number for paged results (Optional)
 #' var_start_date <- "start_date_example" # character | starting date for the range in which data was collected. Use the date formats defined by RFC 3339 ; use strings matching year \"-\" month \"-\" day (e.g. 2020/06/24) (Optional)
@@ -163,38 +163,38 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Retrieve 1) Survey IDs, 2) their corresponding XLS Form IDs, and 3) Base XLS Form of all RPME surveys conducted in a country. The date of reference, SurveyDate, for the data collection is set by the officer responsible for the upload of each survey.
-#' api_instance <- databridges_api$new()
+#' api_instance <- RpmeApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$RpmeSurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_envdata_file = "result.txt")
-#' result <- api_instance$rpme_api$RpmeSurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
+#' result <- api_instance$RpmeSurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  RpmeVariablesGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_page <- 1 # integer |  (Optional)
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #List of variables
-#' api_instance <- databridges_api$new()
+#' api_instance <- RpmeApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$RpmeVariablesGet(page = var_page, env = var_envdata_file = "result.txt")
-#' result <- api_instance$rpme_api$RpmeVariablesGet(page = var_page, env = var_env)
+#' result <- api_instance$RpmeVariablesGet(page = var_page, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  RpmeXLSFormsGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_adm0_code <- 0 # integer | code for the country as retrieved from https://api.vam.wfp.org/geodata/CountriesInRegion (Optional)
 #' var_page <- 1 # integer | page number for paged results (Optional)
 #' var_start_date <- "start_date_example" # character | starting date for the range in which data using this XLSForm was collected. Use the date formats defined by RFC 3339 ; use strings matching year \"-\" month \"-\" day (e.g. 2020/06/24) (Optional)
@@ -202,14 +202,14 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Get a complete list of XLS Forms uploaded on the RPME in a given period of data collection. This is the digital version of the questionnaire used during the data collection exercise.
-#' api_instance <- databridges_api$new()
+#' api_instance <- RpmeApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$RpmeXLSFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_envdata_file = "result.txt")
-#' result <- api_instance$rpme_api$RpmeXLSFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
+#' result <- api_instance$RpmeXLSFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
 #' dput(result)
 #'
 #'
@@ -344,7 +344,7 @@ RpmeApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "RpmeAssessmentPagedResult", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "RpmeAssessmentPagedResult", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -461,7 +461,7 @@ RpmeApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PagedSurveyListDTO]", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "array[PagedSurveyListDTO]", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -563,7 +563,7 @@ RpmeApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "RpmeVariablePagedResult", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "RpmeVariablePagedResult", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -680,7 +680,7 @@ RpmeApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PagedXlsFormListDTO]", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "array[PagedXlsFormListDTO]", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

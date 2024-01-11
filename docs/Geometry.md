@@ -1,4 +1,4 @@
-# databridges::Geometry
+# DataBridgesAPIr::Geometry
 
 
 ## Properties

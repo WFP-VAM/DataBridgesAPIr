@@ -1,4 +1,4 @@
-# databridges::MFIProcessedDataDTO
+# DataBridgesAPIr::MFIProcessedDataDTO
 
 
 ## Properties

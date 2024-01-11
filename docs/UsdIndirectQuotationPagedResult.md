@@ -1,4 +1,4 @@
-# databridges::UsdIndirectQuotationPagedResult
+# DataBridgesAPIr::UsdIndirectQuotationPagedResult
 
 
 ## Properties

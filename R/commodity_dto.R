@@ -205,10 +205,10 @@ CommodityDTO <- R6::R6Class(
         self$`parentId` <- this_object$`parentId`
       }
       if (!is.null(this_object$`processing`)) {
-        self$`processing` <- ApiClient$new()$deserializeObj(this_object$`processing`, "array[CommodityProcessingDTO]", loadNamespace("databridges"))
+        self$`processing` <- ApiClient$new()$deserializeObj(this_object$`processing`, "array[CommodityProcessingDTO]", loadNamespace("DataBridgesAPIr"))
       }
       if (!is.null(this_object$`qualities`)) {
-        self$`qualities` <- ApiClient$new()$deserializeObj(this_object$`qualities`, "array[CommodityQualityDTO]", loadNamespace("databridges"))
+        self$`qualities` <- ApiClient$new()$deserializeObj(this_object$`qualities`, "array[CommodityQualityDTO]", loadNamespace("DataBridgesAPIr"))
       }
       if (!is.null(this_object$`supply`)) {
         self$`supply` <- this_object$`supply`
@@ -339,8 +339,8 @@ CommodityDTO <- R6::R6Class(
       self$`id` <- this_object$`id`
       self$`name` <- this_object$`name`
       self$`parentId` <- this_object$`parentId`
-      self$`processing` <- ApiClient$new()$deserializeObj(this_object$`processing`, "array[CommodityProcessingDTO]", loadNamespace("databridges"))
-      self$`qualities` <- ApiClient$new()$deserializeObj(this_object$`qualities`, "array[CommodityQualityDTO]", loadNamespace("databridges"))
+      self$`processing` <- ApiClient$new()$deserializeObj(this_object$`processing`, "array[CommodityProcessingDTO]", loadNamespace("DataBridgesAPIr"))
+      self$`qualities` <- ApiClient$new()$deserializeObj(this_object$`qualities`, "array[CommodityQualityDTO]", loadNamespace("DataBridgesAPIr"))
       self$`supply` <- this_object$`supply`
       self$`updateDate` <- this_object$`updateDate`
       # process additional properties/fields in the payload

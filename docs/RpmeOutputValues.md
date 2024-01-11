@@ -1,4 +1,4 @@
-# databridges::RpmeOutputValues
+# DataBridgesAPIr::RpmeOutputValues
 
 
 ## Properties

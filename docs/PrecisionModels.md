@@ -1,4 +1,4 @@
-# databridges::PrecisionModels
+# DataBridgesAPIr::PrecisionModels
 
 
 ## Properties

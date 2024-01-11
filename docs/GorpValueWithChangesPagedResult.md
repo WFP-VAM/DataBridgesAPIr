@@ -1,4 +1,4 @@
-# databridges::GorpValueWithChangesPagedResult
+# DataBridgesAPIr::GorpValueWithChangesPagedResult
 
 
 ## Properties

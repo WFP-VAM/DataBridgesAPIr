@@ -48,20 +48,20 @@
 #' \dontrun{
 #' ####################  FoodSecurityListGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_iso3 <- "iso3_example" # character | The country ISO3 code (Optional)
 #' var_year <- 56 # integer |  (Optional)
 #' var_page <- 1 # integer |  (Optional)
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
-#' api_instance <- databridges_api$new()
+#' api_instance <- FoodSecurityApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$FoodSecurityListGet(iso3 = var_iso3, year = var_year, page = var_page, env = var_envdata_file = "result.txt")
-#' result <- api_instance$food_security_api$FoodSecurityListGet(iso3 = var_iso3, year = var_year, page = var_page, env = var_env)
+#' result <- api_instance$FoodSecurityListGet(iso3 = var_iso3, year = var_year, page = var_page, env = var_env)
 #' dput(result)
 #'
 #'
@@ -181,7 +181,7 @@ FoodSecurityApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "IpcValuePagedResult", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "IpcValuePagedResult", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

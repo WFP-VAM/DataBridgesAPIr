@@ -148,46 +148,46 @@
 #' \dontrun{
 #' ####################  MFISurveysBaseDataGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_survey_id <- 56 # integer | unique identifier for the collected data, as retrieved from /Surveys API. (Optional)
 #' var_page <- 1 # integer | page number for paged results (Optional)
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Get data that includes the core Market Functionality Index (MFI) fields only by Survey ID
-#' api_instance <- databridges_api$new()
+#' api_instance <- SurveysApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MFISurveysBaseDataGet(survey_id = var_survey_id, page = var_page, env = var_envdata_file = "result.txt")
-#' result <- api_instance$surveys_api$MFISurveysBaseDataGet(survey_id = var_survey_id, page = var_page, env = var_env)
+#' result <- api_instance$MFISurveysBaseDataGet(survey_id = var_survey_id, page = var_page, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  MFISurveysFullDataGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_survey_id <- 56 # integer | unique identifier for the collected data, as retrieved from /Surveys API. (Optional)
 #' var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 #' var_page <- 1 # integer | page number for paged results (Optional)
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Get a full dataset that includes all the fields included in the survey in addition to the core Market Functionality Index (MFI) fields by Survey ID. To access this data, please contact global.mfi@wfp.org for authorization.
-#' api_instance <- databridges_api$new()
+#' api_instance <- SurveysApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MFISurveysFullDataGet(survey_id = var_survey_id, format = var_format, page = var_page, env = var_envdata_file = "result.txt")
-#' result <- api_instance$surveys_api$MFISurveysFullDataGet(survey_id = var_survey_id, format = var_format, page = var_page, env = var_env)
+#' result <- api_instance$MFISurveysFullDataGet(survey_id = var_survey_id, format = var_format, page = var_page, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  MFISurveysGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_adm0_code <- 0 # integer | code for the country as retrieved from https://api.vam.wfp.org/geodata/CountriesInRegion (Optional)
 #' var_page <- 1 # integer | page number for paged results (Optional)
 #' var_start_date <- "start_date_example" # character | starting date for the range in which data was collected. Use the date formats defined by RFC 3339 ; use strings matching year \"-\" month \"-\" day (e.g. 2020/06/24) (Optional)
@@ -195,20 +195,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Retrieve 1) Survey IDs, 2) their corresponding XLS Form IDs, and 3) Base XLS Form of all MFI surveys conducted in a country. A date of reference, SurveyDate, for the data collection is set by the officer responsible of the upload for each survey.
-#' api_instance <- databridges_api$new()
+#' api_instance <- SurveysApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MFISurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_envdata_file = "result.txt")
-#' result <- api_instance$surveys_api$MFISurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
+#' result <- api_instance$MFISurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  MFISurveysProcessedDataGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_survey_id <- 56 # integer | The ID of the survey (Optional)
 #' var_page <- 1 # integer | page number for paged results (Optional)
 #' var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
@@ -220,14 +220,14 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Get a MFI processed data in long format; levels indicate the data aggregation level 1) Normalized Score, 2) Trader Aggregate Score, 3) Market Aggregate Score, 4) Trader Median, 5) Trader Mean, 6) Market Mean; each line corresponds to one of the nine dimensions of scores plus the final MFI aggregate score; 1) Assortment, 2) Availability, 3) Price, 4) Resilience, 5) Competition, 6) Infrastructure, 7) Service, 8) Quality, 9) Access and Protection, and 10) MFI final score; the variable label describes each variable and its value range
-#' api_instance <- databridges_api$new()
+#' api_instance <- SurveysApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MFISurveysProcessedDataGet(survey_id = var_survey_id, page = var_page, format = var_format, start_date = var_start_date, end_date = var_end_date, adm0_codes = var_adm0_codes, market_id = var_market_id, survey_type = var_survey_type, env = var_envdata_file = "result.txt")
-#' result <- api_instance$surveys_api$MFISurveysProcessedDataGet(survey_id = var_survey_id, page = var_page, format = var_format, start_date = var_start_date, end_date = var_end_date, adm0_codes = var_adm0_codes, market_id = var_market_id, survey_type = var_survey_type, env = var_env)
+#' result <- api_instance$MFISurveysProcessedDataGet(survey_id = var_survey_id, page = var_page, format = var_format, start_date = var_start_date, end_date = var_end_date, adm0_codes = var_adm0_codes, market_id = var_market_id, survey_type = var_survey_type, env = var_env)
 #' dput(result)
 #'
 #'
@@ -342,7 +342,7 @@ SurveysApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "SurveyDetailsDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "SurveyDetailsDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -454,7 +454,7 @@ SurveysApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "SurveyDetailsDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "SurveyDetailsDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -571,7 +571,7 @@ SurveysApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[PagedSurveyListDTO]", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "array[PagedSurveyListDTO]", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -708,7 +708,7 @@ SurveysApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "PagedProcessedDataDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "PagedProcessedDataDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

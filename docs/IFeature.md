@@ -1,4 +1,4 @@
-# databridges::IFeature
+# DataBridgesAPIr::IFeature
 
 
 ## Properties

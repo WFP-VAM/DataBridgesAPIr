@@ -1,4 +1,4 @@
-# databridges::NtsGeometryServices
+# DataBridgesAPIr::NtsGeometryServices
 
 
 ## Properties

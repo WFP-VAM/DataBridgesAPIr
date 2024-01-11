@@ -444,7 +444,7 @@ Point <- R6::R6Class(
         self$`coordinateSequence` <- `coordinatesequence_object`
       }
       if (!is.null(this_object$`coordinates`)) {
-        self$`coordinates` <- ApiClient$new()$deserializeObj(this_object$`coordinates`, "array[Coordinate]", loadNamespace("databridges"))
+        self$`coordinates` <- ApiClient$new()$deserializeObj(this_object$`coordinates`, "array[Coordinate]", loadNamespace("DataBridgesAPIr"))
       }
       if (!is.null(this_object$`dimension`)) {
         `dimension_object` <- Dimension$new()
@@ -805,7 +805,7 @@ Point <- R6::R6Class(
       self$`centroid` <- Point$new()$fromJSON(jsonlite::toJSON(this_object$`centroid`, auto_unbox = TRUE, digits = NA))
       self$`coordinate` <- Coordinate$new()$fromJSON(jsonlite::toJSON(this_object$`coordinate`, auto_unbox = TRUE, digits = NA))
       self$`coordinateSequence` <- CoordinateSequence$new()$fromJSON(jsonlite::toJSON(this_object$`coordinateSequence`, auto_unbox = TRUE, digits = NA))
-      self$`coordinates` <- ApiClient$new()$deserializeObj(this_object$`coordinates`, "array[Coordinate]", loadNamespace("databridges"))
+      self$`coordinates` <- ApiClient$new()$deserializeObj(this_object$`coordinates`, "array[Coordinate]", loadNamespace("DataBridgesAPIr"))
       self$`dimension` <- Dimension$new()$fromJSON(jsonlite::toJSON(this_object$`dimension`, auto_unbox = TRUE, digits = NA))
       self$`envelope` <- Geometry$new()$fromJSON(jsonlite::toJSON(this_object$`envelope`, auto_unbox = TRUE, digits = NA))
       self$`envelopeInternal` <- Envelope$new()$fromJSON(jsonlite::toJSON(this_object$`envelopeInternal`, auto_unbox = TRUE, digits = NA))

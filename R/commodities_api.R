@@ -79,7 +79,7 @@
 #' \dontrun{
 #' ####################  CommoditiesCategoriesListGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code (Optional)
 #' var_category_name <- "category_name_example" # character | The name, even partial and case insensitive, of a commodity category. (Optional)
 #' var_category_id <- 0 # integer | The exact ID of a Commodity, as found in /Commodities/List. (Optional)
@@ -88,20 +88,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Provides the list of categories.
-#' api_instance <- databridges_api$new()
+#' api_instance <- CommoditiesApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$CommoditiesCategoriesListGet(country_code = var_country_code, category_name = var_category_name, category_id = var_category_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$commodities_api$CommoditiesCategoriesListGet(country_code = var_country_code, category_name = var_category_name, category_id = var_category_id, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$CommoditiesCategoriesListGet(country_code = var_country_code, category_name = var_category_name, category_id = var_category_id, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  CommoditiesListGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code (Optional)
 #' var_commodity_name <- "commodity_name_example" # character | The name, even partial and case insensitive, of a commodity (Optional)
 #' var_commodity_id <- 0 # integer | The exact ID of a commodity (Optional)
@@ -110,14 +110,14 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Provide the detailed list of the commodities available in DataBridges platform
-#' api_instance <- databridges_api$new()
+#' api_instance <- CommoditiesApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$CommoditiesListGet(country_code = var_country_code, commodity_name = var_commodity_name, commodity_id = var_commodity_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$commodities_api$CommoditiesListGet(country_code = var_country_code, commodity_name = var_commodity_name, commodity_id = var_commodity_id, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$CommoditiesListGet(country_code = var_country_code, commodity_name = var_commodity_name, commodity_id = var_commodity_id, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
@@ -247,7 +247,7 @@ CommoditiesApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "PagedCommodityListDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "PagedCommodityListDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -369,7 +369,7 @@ CommoditiesApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "PagedCommodityListDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "PagedCommodityListDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

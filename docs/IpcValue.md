@@ -1,4 +1,4 @@
-# databridges::IpcValue
+# DataBridgesAPIr::IpcValue
 
 
 ## Properties

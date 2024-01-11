@@ -1,4 +1,4 @@
-# databridges::BadRequestDTO
+# DataBridgesAPIr::BadRequestDTO
 
 
 ## Properties

@@ -17,7 +17,7 @@ Returns the list of currencies available in the internal VAM database, with Curr
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Returns the list of currencies available in the internal VAM database, with Currency 3-letter code, matching with ISO 4217.
 #
@@ -29,12 +29,12 @@ var_page <- 1 # integer | Page number for paged results (Optional)
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- CurrencyApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$CurrencyListGet(country_code = var_country_code, currency_name = var_currency_name, currency_id = var_currency_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$currency_api$CurrencyListGet(country_code = var_country_code, currency_name = var_currency_name, currency_id = var_currency_id, page = var_page, format = var_format, env = var_env)
+result <- api_instance$CurrencyListGet(country_code = var_country_code, currency_name = var_currency_name, currency_id = var_currency_id, page = var_page, format = var_format, env = var_env)
 dput(result)
 ```
 
@@ -77,7 +77,7 @@ Returns the value of the Exchange rates from Trading Economics, for official rat
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Returns the value of the Exchange rates from Trading Economics, for official rates, and DataViz for unofficial rates.
 #
@@ -88,12 +88,12 @@ var_page <- 1 # integer | Page number for paged results (Optional)
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- CurrencyApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$CurrencyUsdIndirectQuotationGet(country_iso3 = var_country_iso3, currency_name = var_currency_name, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$currency_api$CurrencyUsdIndirectQuotationGet(country_iso3 = var_country_iso3, currency_name = var_currency_name, page = var_page, format = var_format, env = var_env)
+result <- api_instance$CurrencyUsdIndirectQuotationGet(country_iso3 = var_country_iso3, currency_name = var_currency_name, page = var_page, format = var_format, env = var_env)
 dput(result)
 ```
 

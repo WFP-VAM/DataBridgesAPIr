@@ -97,7 +97,7 @@ PagedXlsFormListDTO <- R6::R6Class(
     fromJSON = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
       if (!is.null(this_object$`items`)) {
-        self$`items` <- ApiClient$new()$deserializeObj(this_object$`items`, "array[XlsFormDTO]", loadNamespace("databridges"))
+        self$`items` <- ApiClient$new()$deserializeObj(this_object$`items`, "array[XlsFormDTO]", loadNamespace("DataBridgesAPIr"))
       }
       if (!is.null(this_object$`page`)) {
         self$`page` <- this_object$`page`
@@ -166,7 +166,7 @@ PagedXlsFormListDTO <- R6::R6Class(
     #' @export
     fromJSONString = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
-      self$`items` <- ApiClient$new()$deserializeObj(this_object$`items`, "array[XlsFormDTO]", loadNamespace("databridges"))
+      self$`items` <- ApiClient$new()$deserializeObj(this_object$`items`, "array[XlsFormDTO]", loadNamespace("DataBridgesAPIr"))
       self$`page` <- this_object$`page`
       self$`totalItems` <- this_object$`totalItems`
       # process additional properties/fields in the payload

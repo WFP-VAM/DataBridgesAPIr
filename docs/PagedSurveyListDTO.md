@@ -1,4 +1,4 @@
-# databridges::PagedSurveyListDTO
+# DataBridgesAPIr::PagedSurveyListDTO
 
 
 ## Properties

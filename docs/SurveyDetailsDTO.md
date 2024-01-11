@@ -1,4 +1,4 @@
-# databridges::SurveyDetailsDTO
+# DataBridgesAPIr::SurveyDetailsDTO
 
 
 ## Properties

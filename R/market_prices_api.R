@@ -196,7 +196,7 @@
 #' \dontrun{
 #' ####################  MarketPricesAlpsGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code. (Optional)
 #' var_market_id <- 0 # integer | Unique ID of a Market, as found in /Markets/GeoJSONList (Optional)
 #' var_commodity_id <- 0 # integer | The exact ID of a Commodity, as found in /Commodities/List (Optional)
@@ -211,20 +211,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Returns time series values of ALPS and PEWI.
-#' api_instance <- databridges_api$new()
+#' api_instance <- MarketPricesApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MarketPricesAlpsGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$market_prices_api$MarketPricesAlpsGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$MarketPricesAlpsGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  MarketPricesPriceDailyGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code. (Optional)
 #' var_market_id <- 0 # integer | Unique ID of a Market, as found in /Markets/GeoJSONList (Optional)
 #' var_commodity_id <- 0 # integer | The exact ID of a Commodity, as found in /Commodities/List (Optional)
@@ -239,20 +239,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Returns a daily time series of commodity market prices.
-#' api_instance <- databridges_api$new()
+#' api_instance <- MarketPricesApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MarketPricesPriceDailyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$market_prices_api$MarketPricesPriceDailyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$MarketPricesPriceDailyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  MarketPricesPriceMonthlyGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code. (Optional)
 #' var_market_id <- 0 # integer | Unique ID of a Market, as found in /Markets/GeoJSONList (Optional)
 #' var_commodity_id <- 0 # integer | The exact ID of a Commodity, as found in /Commodities/List (Optional)
@@ -267,20 +267,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Returns a monthly time series of commodity market prices.
-#' api_instance <- databridges_api$new()
+#' api_instance <- MarketPricesApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MarketPricesPriceMonthlyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$market_prices_api$MarketPricesPriceMonthlyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$MarketPricesPriceMonthlyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  MarketPricesPriceRawGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code. (Optional)
 #' var_market_id <- 0 # integer | Unique ID of a Market, as found in /Markets/GeoJSONList (Optional)
 #' var_commodity_id <- 0 # integer | The exact ID of a Commodity, as found in /Commodities/List (Optional)
@@ -295,20 +295,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Returns original commodity market prices
-#' api_instance <- databridges_api$new()
+#' api_instance <- MarketPricesApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MarketPricesPriceRawGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$market_prices_api$MarketPricesPriceRawGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$MarketPricesPriceRawGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  MarketPricesPriceWeeklyGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_country_code <- "country_code_example" # character | The code to identify the country. It can be a ISO-3166 Alpha 3 code or the VAM internal admin0code. (Optional)
 #' var_market_id <- 0 # integer | Unique ID of a Market, as found in /Markets/GeoJSONList (Optional)
 #' var_commodity_id <- 0 # integer | The exact ID of a Commodity, as found in /Commodities/List (Optional)
@@ -323,14 +323,14 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Returns a weekly time series of commodity market prices.
-#' api_instance <- databridges_api$new()
+#' api_instance <- MarketPricesApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$MarketPricesPriceWeeklyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$market_prices_api$MarketPricesPriceWeeklyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
+#' result <- api_instance$MarketPricesPriceWeeklyGet(country_code = var_country_code, market_id = var_market_id, commodity_id = var_commodity_id, price_type_name = var_price_type_name, currency_id = var_currency_id, price_flag = var_price_flag, start_date = var_start_date, end_date = var_end_date, latest_value_only = var_latest_value_only, page = var_page, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
@@ -490,7 +490,7 @@ MarketPricesApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "ViewExtendedAlpsValuePagedResult", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "ViewExtendedAlpsValuePagedResult", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -642,7 +642,7 @@ MarketPricesApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "ViewExtendedAggregatedPricePagedResult", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "ViewExtendedAggregatedPricePagedResult", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -794,7 +794,7 @@ MarketPricesApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "ViewExtendedAggregatedPricePagedResult", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "ViewExtendedAggregatedPricePagedResult", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -946,7 +946,7 @@ MarketPricesApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "PagedCommodityPriceListDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "PagedCommodityPriceListDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -1098,7 +1098,7 @@ MarketPricesApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "PagedCommodityWeeklyAggregatedPriceListDTO", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "PagedCommodityWeeklyAggregatedPriceListDTO", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

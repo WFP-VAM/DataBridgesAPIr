@@ -78,7 +78,7 @@
 #' \dontrun{
 #' ####################  EconomicDataIndicatorListGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_page <- 1 # integer | Page number for paged results (Optional)
 #' var_indicator_name <- "" # character | Unique indicator name. (Optional)
 #' var_iso3 <- "" # character | The code to identify the country. Must be a ISO-3166 Alpha 3 code. (Optional)
@@ -86,20 +86,20 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Returns the lists of indicators.
-#' api_instance <- databridges_api$new()
+#' api_instance <- EconomicDataApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$EconomicDataIndicatorListGet(page = var_page, indicator_name = var_indicator_name, iso3 = var_iso3, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$economic_data_api$EconomicDataIndicatorListGet(page = var_page, indicator_name = var_indicator_name, iso3 = var_iso3, format = var_format, env = var_env)
+#' result <- api_instance$EconomicDataIndicatorListGet(page = var_page, indicator_name = var_indicator_name, iso3 = var_iso3, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
 #' ####################  EconomicDataIndicatorNameGet  ####################
 #'
-#' library(databridges)
+#' library(DataBridgesAPIr)
 #' var_indicator_name <- "indicator_name_example" # character | Name of the indicator as found in /EconomicData/IndicatorList.
 #' var_page <- 1 # integer | Page number for paged results (Optional)
 #' var_iso3 <- "" # character | The code to identify the country. Must be a ISO-3166 Alpha 3 code. (Optional)
@@ -109,14 +109,14 @@
 #' var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 #'
 #' #Returns the time series of values for different indicators.
-#' api_instance <- databridges_api$new()
+#' api_instance <- EconomicDataApi$new()
 #'
 #' # Configure OAuth2 access token for authorization: default
 #' api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$EconomicDataIndicatorNameGet(var_indicator_name, page = var_page, iso3 = var_iso3, start_date = var_start_date, end_date = var_end_date, format = var_format, env = var_envdata_file = "result.txt")
-#' result <- api_instance$economic_data_api$EconomicDataIndicatorNameGet(var_indicator_name, page = var_page, iso3 = var_iso3, start_date = var_start_date, end_date = var_end_date, format = var_format, env = var_env)
+#' result <- api_instance$EconomicDataIndicatorNameGet(var_indicator_name, page = var_page, iso3 = var_iso3, start_date = var_start_date, end_date = var_end_date, format = var_format, env = var_env)
 #' dput(result)
 #'
 #'
@@ -241,7 +241,7 @@ EconomicDataApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "EconomicIndicatorPropertyPagedResult", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "EconomicIndicatorPropertyPagedResult", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -374,7 +374,7 @@ EconomicDataApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "data.frame", loadNamespace("databridges")),
+          self$api_client$deserialize(local_var_resp$response, "data.frame", loadNamespace("DataBridgesAPIr")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

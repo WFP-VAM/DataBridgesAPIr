@@ -1,4 +1,4 @@
-# databridges::CurrencyDTO
+# DataBridgesAPIr::CurrencyDTO
 
 
 ## Properties

@@ -351,7 +351,7 @@ RpmeAssessment <- R6::R6Class(
         self$`nbBeneficiariesInterviewed` <- this_object$`nbBeneficiariesInterviewed`
       }
       if (!is.null(this_object$`outputValues`)) {
-        self$`outputValues` <- ApiClient$new()$deserializeObj(this_object$`outputValues`, "array[RpmeOutputValues]", loadNamespace("databridges"))
+        self$`outputValues` <- ApiClient$new()$deserializeObj(this_object$`outputValues`, "array[RpmeOutputValues]", loadNamespace("DataBridgesAPIr"))
       }
       if (!is.null(this_object$`priceScoreTbd`)) {
         self$`priceScoreTbd` <- this_object$`priceScoreTbd`
@@ -585,7 +585,7 @@ RpmeAssessment <- R6::R6Class(
       self$`beneficiariesScoreTbu` <- this_object$`beneficiariesScoreTbu`
       self$`marketId` <- this_object$`marketId`
       self$`nbBeneficiariesInterviewed` <- this_object$`nbBeneficiariesInterviewed`
-      self$`outputValues` <- ApiClient$new()$deserializeObj(this_object$`outputValues`, "array[RpmeOutputValues]", loadNamespace("databridges"))
+      self$`outputValues` <- ApiClient$new()$deserializeObj(this_object$`outputValues`, "array[RpmeOutputValues]", loadNamespace("DataBridgesAPIr"))
       self$`priceScoreTbd` <- this_object$`priceScoreTbd`
       self$`priceScoreTbu` <- this_object$`priceScoreTbu`
       self$`sevCntrDev` <- this_object$`sevCntrDev`

@@ -1,4 +1,4 @@
-# databridges::ViewExtendedAlpsValue
+# DataBridgesAPIr::ViewExtendedAlpsValue
 
 
 ## Properties

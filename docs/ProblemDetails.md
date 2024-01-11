@@ -1,4 +1,4 @@
-# databridges::ProblemDetails
+# DataBridgesAPIr::ProblemDetails
 
 
 ## Properties

@@ -1,4 +1,4 @@
-# databridges::NearbyMarketsDTO
+# DataBridgesAPIr::NearbyMarketsDTO
 
 
 ## Properties

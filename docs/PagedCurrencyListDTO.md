@@ -1,4 +1,4 @@
-# databridges::PagedCurrencyListDTO
+# DataBridgesAPIr::PagedCurrencyListDTO
 
 
 ## Properties

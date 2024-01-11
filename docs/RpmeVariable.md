@@ -1,4 +1,4 @@
-# databridges::RpmeVariable
+# DataBridgesAPIr::RpmeVariable
 
 
 ## Properties

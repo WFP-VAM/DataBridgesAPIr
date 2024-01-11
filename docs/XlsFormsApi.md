@@ -17,7 +17,7 @@ Get a complete set of XLS Form definitions of a given XLS Form ID. This is the d
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Get a complete set of XLS Form definitions of a given XLS Form ID. This is the digital version of the questionnaire used during the data collection exercise.
 #
@@ -25,12 +25,12 @@ library(databridges)
 var_xls_form_id <- 56 # integer | unique identifier for the XLS Form, as retrieved from /XLSForms (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- XlsFormsApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$MFIXlsFormsDefinitionGet(xls_form_id = var_xls_form_id, env = var_envdata_file = "result.txt")
-result <- api_instance$xls_forms_api$MFIXlsFormsDefinitionGet(xls_form_id = var_xls_form_id, env = var_env)
+result <- api_instance$MFIXlsFormsDefinitionGet(xls_form_id = var_xls_form_id, env = var_env)
 dput(result)
 ```
 
@@ -69,7 +69,7 @@ Get a complete list of XLS Forms uploaded on the MFI Data Bridge in a given peri
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Get a complete list of XLS Forms uploaded on the MFI Data Bridge in a given period of data collection. This is the digital version of the questionnaire used during the data collection exercise.
 #
@@ -80,12 +80,12 @@ var_start_date <- "start_date_example" # character | starting date for the range
 var_end_date <- "end_date_example" # character | ending date for the range in which data using this XLSForm was collected. Use the date formats defined by RFC 3339 ; use strings matching year \"-\" month \"-\" day (e.g. 2020/06/24) (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- XlsFormsApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$MFIXlsFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_envdata_file = "result.txt")
-result <- api_instance$xls_forms_api$MFIXlsFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
+result <- api_instance$MFIXlsFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
 dput(result)
 ```
 

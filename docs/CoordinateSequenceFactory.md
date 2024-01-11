@@ -1,4 +1,4 @@
-# databridges::CoordinateSequenceFactory
+# DataBridgesAPIr::CoordinateSequenceFactory
 
 
 ## Properties

@@ -1,4 +1,4 @@
-# databridges::PagedCommodityPriceListDTO
+# DataBridgesAPIr::PagedCommodityPriceListDTO
 
 
 ## Properties

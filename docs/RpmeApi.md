@@ -19,7 +19,7 @@ Processed values for each variable used in the assessments
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Processed values for each variable used in the assessments
 #
@@ -32,12 +32,12 @@ var_market_id <- 56 # integer | The ID of the market (Optional)
 var_adm0_code_dots <- "" # character |  (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- RpmeApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$RpmeOutputValuesGet(page = var_page, adm0_code = var_adm0_code, survey_id = var_survey_id, shop_id = var_shop_id, market_id = var_market_id, adm0_code_dots = var_adm0_code_dots, env = var_envdata_file = "result.txt")
-result <- api_instance$rpme_api$RpmeOutputValuesGet(page = var_page, adm0_code = var_adm0_code, survey_id = var_survey_id, shop_id = var_shop_id, market_id = var_market_id, adm0_code_dots = var_adm0_code_dots, env = var_env)
+result <- api_instance$RpmeOutputValuesGet(page = var_page, adm0_code = var_adm0_code, survey_id = var_survey_id, shop_id = var_shop_id, market_id = var_market_id, adm0_code_dots = var_adm0_code_dots, env = var_env)
 dput(result)
 ```
 
@@ -81,7 +81,7 @@ Retrieve 1) Survey IDs, 2) their corresponding XLS Form IDs, and 3) Base XLS For
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Retrieve 1) Survey IDs, 2) their corresponding XLS Form IDs, and 3) Base XLS Form of all RPME surveys conducted in a country. The date of reference, SurveyDate, for the data collection is set by the officer responsible for the upload of each survey.
 #
@@ -92,12 +92,12 @@ var_start_date <- "start_date_example" # character | starting date for the range
 var_end_date <- "end_date_example" # character | ending date for the range in which data was collected. Use the date formats defined by RFC 3339 ; use strings matching year \"-\" month \"-\" day (e.g. 2020/06/24) (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- RpmeApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$RpmeSurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_envdata_file = "result.txt")
-result <- api_instance$rpme_api$RpmeSurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
+result <- api_instance$RpmeSurveysGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
 dput(result)
 ```
 
@@ -139,7 +139,7 @@ List of variables
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # List of variables
 #
@@ -147,12 +147,12 @@ library(databridges)
 var_page <- 1 # integer |  (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- RpmeApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$RpmeVariablesGet(page = var_page, env = var_envdata_file = "result.txt")
-result <- api_instance$rpme_api$RpmeVariablesGet(page = var_page, env = var_env)
+result <- api_instance$RpmeVariablesGet(page = var_page, env = var_env)
 dput(result)
 ```
 
@@ -191,7 +191,7 @@ Get a complete list of XLS Forms uploaded on the RPME in a given period of data 
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Get a complete list of XLS Forms uploaded on the RPME in a given period of data collection. This is the digital version of the questionnaire used during the data collection exercise.
 #
@@ -202,12 +202,12 @@ var_start_date <- "start_date_example" # character | starting date for the range
 var_end_date <- "end_date_example" # character | ending date for the range in which data using this XLSForm was collected. Use the date formats defined by RFC 3339 ; use strings matching year \"-\" month \"-\" day (e.g. 2020/06/24) (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- RpmeApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$RpmeXLSFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_envdata_file = "result.txt")
-result <- api_instance$rpme_api$RpmeXLSFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
+result <- api_instance$RpmeXLSFormsGet(adm0_code = var_adm0_code, page = var_page, start_date = var_start_date, end_date = var_end_date, env = var_env)
 dput(result)
 ```
 

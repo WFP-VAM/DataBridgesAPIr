@@ -1,4 +1,4 @@
-# databridges::WeeklyAggregatedPrice
+# DataBridgesAPIr::WeeklyAggregatedPrice
 
 
 ## Properties

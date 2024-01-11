@@ -118,7 +118,7 @@ NtsGeometryServices <- R6::R6Class(
     fromJSON = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
       if (!is.null(this_object$`coordinateEqualityComparer`)) {
-        self$`coordinateEqualityComparer` <- ApiClient$new()$deserializeObj(this_object$`coordinateEqualityComparer`, "map(AnyType)", loadNamespace("databridges"))
+        self$`coordinateEqualityComparer` <- ApiClient$new()$deserializeObj(this_object$`coordinateEqualityComparer`, "map(AnyType)", loadNamespace("DataBridgesAPIr"))
       }
       if (!is.null(this_object$`defaultCoordinateSequenceFactory`)) {
         `defaultcoordinatesequencefactory_object` <- CoordinateSequenceFactory$new()
@@ -134,7 +134,7 @@ NtsGeometryServices <- R6::R6Class(
         self$`defaultSRID` <- this_object$`defaultSRID`
       }
       if (!is.null(this_object$`geometryOverlay`)) {
-        self$`geometryOverlay` <- ApiClient$new()$deserializeObj(this_object$`geometryOverlay`, "map(AnyType)", loadNamespace("databridges"))
+        self$`geometryOverlay` <- ApiClient$new()$deserializeObj(this_object$`geometryOverlay`, "map(AnyType)", loadNamespace("DataBridgesAPIr"))
       }
       # process additional properties/fields in the payload
       for (key in names(this_object)) {
@@ -213,11 +213,11 @@ NtsGeometryServices <- R6::R6Class(
     #' @export
     fromJSONString = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
-      self$`coordinateEqualityComparer` <- ApiClient$new()$deserializeObj(this_object$`coordinateEqualityComparer`, "map(AnyType)", loadNamespace("databridges"))
+      self$`coordinateEqualityComparer` <- ApiClient$new()$deserializeObj(this_object$`coordinateEqualityComparer`, "map(AnyType)", loadNamespace("DataBridgesAPIr"))
       self$`defaultCoordinateSequenceFactory` <- CoordinateSequenceFactory$new()$fromJSON(jsonlite::toJSON(this_object$`defaultCoordinateSequenceFactory`, auto_unbox = TRUE, digits = NA))
       self$`defaultPrecisionModel` <- PrecisionModel$new()$fromJSON(jsonlite::toJSON(this_object$`defaultPrecisionModel`, auto_unbox = TRUE, digits = NA))
       self$`defaultSRID` <- this_object$`defaultSRID`
-      self$`geometryOverlay` <- ApiClient$new()$deserializeObj(this_object$`geometryOverlay`, "map(AnyType)", loadNamespace("databridges"))
+      self$`geometryOverlay` <- ApiClient$new()$deserializeObj(this_object$`geometryOverlay`, "map(AnyType)", loadNamespace("DataBridgesAPIr"))
       # process additional properties/fields in the payload
       for (key in names(this_object)) {
         if (!(key %in% self$`_field_list`)) { # json key not in list of fields

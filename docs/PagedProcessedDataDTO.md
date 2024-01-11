@@ -1,4 +1,4 @@
-# databridges::PagedProcessedDataDTO
+# DataBridgesAPIr::PagedProcessedDataDTO
 
 
 ## Properties

@@ -1,4 +1,4 @@
-# databridges::RpmeVariablePagedResult
+# DataBridgesAPIr::RpmeVariablePagedResult
 
 
 ## Properties

@@ -1,4 +1,4 @@
-# databridges::Coordinate
+# DataBridgesAPIr::Coordinate
 
 
 ## Properties

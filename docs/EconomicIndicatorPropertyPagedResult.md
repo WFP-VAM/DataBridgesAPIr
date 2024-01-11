@@ -1,4 +1,4 @@
-# databridges::EconomicIndicatorPropertyPagedResult
+# DataBridgesAPIr::EconomicIndicatorPropertyPagedResult
 
 
 ## Properties

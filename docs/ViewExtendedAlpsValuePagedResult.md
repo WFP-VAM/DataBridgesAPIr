@@ -1,4 +1,4 @@
-# databridges::ViewExtendedAlpsValuePagedResult
+# DataBridgesAPIr::ViewExtendedAlpsValuePagedResult
 
 
 ## Properties

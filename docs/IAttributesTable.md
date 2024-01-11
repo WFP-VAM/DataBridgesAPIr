@@ -1,4 +1,4 @@
-# databridges::IAttributesTable
+# DataBridgesAPIr::IAttributesTable
 
 
 ## Properties

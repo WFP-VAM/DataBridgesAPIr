@@ -1,4 +1,4 @@
-# databridges::PagedXlsFormListDTO
+# DataBridgesAPIr::PagedXlsFormListDTO
 
 
 ## Properties

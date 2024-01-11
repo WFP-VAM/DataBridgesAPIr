@@ -1,4 +1,4 @@
-# databridges::UsdIndirectQuotation
+# DataBridgesAPIr::UsdIndirectQuotation
 
 
 ## Properties

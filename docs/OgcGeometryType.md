@@ -1,4 +1,4 @@
-# databridges::OgcGeometryType
+# DataBridgesAPIr::OgcGeometryType
 
 
 ## Properties

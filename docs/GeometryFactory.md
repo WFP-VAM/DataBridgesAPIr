@@ -1,4 +1,4 @@
-# databridges::GeometryFactory
+# DataBridgesAPIr::GeometryFactory
 
 
 ## Properties

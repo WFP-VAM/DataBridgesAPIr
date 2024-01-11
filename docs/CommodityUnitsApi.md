@@ -17,7 +17,7 @@ Provides conversion factors to Kilogram or Litres for each convertible unit of m
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Provides conversion factors to Kilogram or Litres for each convertible unit of measure.
 #
@@ -30,12 +30,12 @@ var_page <- 1 # integer | Page number for paged results (Optional)
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- CommodityUnitsApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$CommodityUnitsConversionListGet(country_code = var_country_code, commodity_id = var_commodity_id, from_unit_id = var_from_unit_id, to_unit_id = var_to_unit_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$commodity_units_api$CommodityUnitsConversionListGet(country_code = var_country_code, commodity_id = var_commodity_id, from_unit_id = var_from_unit_id, to_unit_id = var_to_unit_id, page = var_page, format = var_format, env = var_env)
+result <- api_instance$CommodityUnitsConversionListGet(country_code = var_country_code, commodity_id = var_commodity_id, from_unit_id = var_from_unit_id, to_unit_id = var_to_unit_id, page = var_page, format = var_format, env = var_env)
 dput(result)
 ```
 
@@ -79,7 +79,7 @@ Provides the detailed list of the unit of measure available in DataBridges platf
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Provides the detailed list of the unit of measure available in DataBridges platform
 #
@@ -91,12 +91,12 @@ var_page <- 1 # integer | page number for paged results (Optional)
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- CommodityUnitsApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$CommodityUnitsListGet(country_code = var_country_code, commodity_unit_name = var_commodity_unit_name, commodity_unit_id = var_commodity_unit_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$commodity_units_api$CommodityUnitsListGet(country_code = var_country_code, commodity_unit_name = var_commodity_unit_name, commodity_unit_id = var_commodity_unit_id, page = var_page, format = var_format, env = var_env)
+result <- api_instance$CommodityUnitsListGet(country_code = var_country_code, commodity_unit_name = var_commodity_unit_name, commodity_unit_id = var_commodity_unit_id, page = var_page, format = var_format, env = var_env)
 dput(result)
 ```
 

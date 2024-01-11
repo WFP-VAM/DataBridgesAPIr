@@ -17,7 +17,7 @@ Provides the list of categories.
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Provides the list of categories.
 #
@@ -29,12 +29,12 @@ var_page <- 1 # integer | page number for paged results (Optional)
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- CommoditiesApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$CommoditiesCategoriesListGet(country_code = var_country_code, category_name = var_category_name, category_id = var_category_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$commodities_api$CommoditiesCategoriesListGet(country_code = var_country_code, category_name = var_category_name, category_id = var_category_id, page = var_page, format = var_format, env = var_env)
+result <- api_instance$CommoditiesCategoriesListGet(country_code = var_country_code, category_name = var_category_name, category_id = var_category_id, page = var_page, format = var_format, env = var_env)
 dput(result)
 ```
 
@@ -77,7 +77,7 @@ Provide the detailed list of the commodities available in DataBridges platform
 
 ### Example
 ```R
-library(databridges)
+library(DataBridgesAPIr)
 
 # Provide the detailed list of the commodities available in DataBridges platform
 #
@@ -89,12 +89,12 @@ var_page <- 1 # integer | page number for paged results (Optional)
 var_format <- "json" # character | Output format: [JSON|CSV] Json is the default value (Optional)
 var_env <- "env_example" # character | Environment.   * `prod` - api.vam.wfp.org   * `dev` - dev.api.vam.wfp.org (Optional)
 
-api_instance <- databridges_api$new()
+api_instance <- CommoditiesApi$new()
 # Configure OAuth2 access token for authorization: default
 api_instance$api_client$access_token <- Sys.getenv("ACCESS_TOKEN")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$CommoditiesListGet(country_code = var_country_code, commodity_name = var_commodity_name, commodity_id = var_commodity_id, page = var_page, format = var_format, env = var_envdata_file = "result.txt")
-result <- api_instance$commodities_api$CommoditiesListGet(country_code = var_country_code, commodity_name = var_commodity_name, commodity_id = var_commodity_id, page = var_page, format = var_format, env = var_env)
+result <- api_instance$CommoditiesListGet(country_code = var_country_code, commodity_name = var_commodity_name, commodity_id = var_commodity_id, page = var_page, format = var_format, env = var_env)
 dput(result)
 ```
 

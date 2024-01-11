@@ -1,4 +1,4 @@
-# databridges::RpmeAssessmentPagedResult
+# DataBridgesAPIr::RpmeAssessmentPagedResult
 
 
 ## Properties
